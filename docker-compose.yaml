@@ -154,7 +154,7 @@ services:
       POSTGRES_DB: dittofeed
       POSTGRES_USER: postgres
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres:/var/lib/postgresql/data
     networks:
@@ -280,9 +280,9 @@ services:
   clickhouse-server:
     image: clickhouse/clickhouse-server:24.12.6.70-alpine
     ports:
-      - "8123:8123"
-      - "9000:9000"
-      - "9009:9009"
+      - "8124:8123"
+      - "9002:9000"
+      - "9012:9009"
     environment:
       <<: *clickhouse-credentials
     volumes:
